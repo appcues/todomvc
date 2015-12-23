@@ -74,10 +74,6 @@ var app = app || {};
 			this.setState({editing: null});
 		},
 
-		clearCompleted: function () {
-			this.props.model.clearCompleted();
-		},
-
 		render: function () {
 			var footer;
 			var main;
@@ -109,7 +105,6 @@ var app = app || {};
 					<TodoFooter
 						count={activeTodoCount}
 						completedCount={completedCount}
-						onClearCompleted={this.clearCompleted}
 					/>;
 			}
 
