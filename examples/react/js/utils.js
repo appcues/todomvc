@@ -25,15 +25,6 @@ var app = app || {};
 			return count === 1 ? word : word + 's';
 		},
 
-		store: function (namespace, data) {
-			if (data) {
-				return localStorage.setItem(namespace, JSON.stringify(data));
-			}
-
-			var store = localStorage.getItem(namespace);
-			return (store && JSON.parse(store)) || [];
-		},
-
 		extend: function () {
 			var newObj = {};
 			for (var i = 0; i < arguments.length; i++) {
