@@ -8,9 +8,6 @@ var app = app || {};
 (function () {
 	'use strict';
 
-	app.ALL_TODOS = 'all';
-	app.ACTIVE_TODOS = 'active';
-	app.COMPLETED_TODOS = 'completed';
 	var TodoFooter = app.TodoFooter;
 	var TodoItem = app.TodoItem;
 
@@ -19,7 +16,6 @@ var app = app || {};
 	var TodoApp = React.createClass({
 		getInitialState: function () {
 			return {
-				nowShowing: app.ALL_TODOS,
 				editing: null,
 				newTodo: ''
 			};
@@ -28,9 +24,7 @@ var app = app || {};
 		componentDidMount: function () {
 			var setState = this.setState;
 			var router = Router({
-				'/': setState.bind(this, {nowShowing: app.ALL_TODOS}),
-				'/active': setState.bind(this, {nowShowing: app.ACTIVE_TODOS}),
-				'/completed': setState.bind(this, {nowShowing: app.COMPLETED_TODOS})
+				'/': setState.bind(this, {})
 			});
 			router.init('/');
 		},
@@ -89,18 +83,7 @@ var app = app || {};
 			var main;
 			var todos = this.props.model.todos;
 
-			var shownTodos = todos.filter(function (todo) {
-				switch (this.state.nowShowing) {
-				case app.ACTIVE_TODOS:
-					return !todo.completed;
-				case app.COMPLETED_TODOS:
-					return todo.completed;
-				default:
-					return true;
-				}
-			}, this);
-
-			var todoItems = shownTodos.map(function (todo) {
+			var todoItems = todos.map(function (todo) {
 				return (
 					<TodoItem
 						key={todo.id}
@@ -126,7 +109,6 @@ var app = app || {};
 					<TodoFooter
 						count={activeTodoCount}
 						completedCount={completedCount}
-						nowShowing={this.state.nowShowing}
 						onClearCompleted={this.clearCompleted}
 					/>;
 			}
