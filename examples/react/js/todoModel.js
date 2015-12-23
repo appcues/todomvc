@@ -59,14 +59,6 @@ var app = app || {};
 		this.inform();
 	};
 
-	app.TodoModel.prototype.destroy = function (todo) {
-		this.todos = this.todos.filter(function (candidate) {
-			return candidate !== todo;
-		});
-
-		this.inform();
-	};
-
 	app.TodoModel.prototype.save = function (todoToSave, text) {
 		this.todos = this.todos.map(function (todo) {
 			return todo !== todoToSave ? todo : Utils.extend({}, todo, {title: text});

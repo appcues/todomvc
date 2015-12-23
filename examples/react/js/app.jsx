@@ -57,10 +57,6 @@ var app = app || {};
 			this.props.model.toggle(todoToToggle);
 		},
 
-		destroy: function (todo) {
-			this.props.model.destroy(todo);
-		},
-
 		edit: function (todo) {
 			this.setState({editing: todo.id});
 		},
@@ -85,7 +81,6 @@ var app = app || {};
 						key={todo.id}
 						todo={todo}
 						onToggle={this.toggle.bind(this, todo)}
-						onDestroy={this.destroy.bind(this, todo)}
 						onEdit={this.edit.bind(this, todo)}
 						editing={this.state.editing === todo.id}
 						onSave={this.save.bind(this, todo)}

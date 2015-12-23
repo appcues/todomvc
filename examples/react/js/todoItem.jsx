@@ -17,8 +17,6 @@ var app = app || {};
 			if (val) {
 				this.props.onSave(val);
 				this.setState({editText: val});
-			} else {
-				this.props.onDestroy();
 			}
 		},
 
@@ -91,7 +89,6 @@ var app = app || {};
 						<label onDoubleClick={this.handleEdit}>
 							{this.props.todo.title}
 						</label>
-						<button className="destroy" onClick={this.props.onDestroy} />
 					</div>
 					<input
 						ref="editField"
