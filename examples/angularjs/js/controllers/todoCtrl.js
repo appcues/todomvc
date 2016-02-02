@@ -68,14 +68,15 @@ angular.module('todomvc')
 				$scope.editedTodo = null;
 				return;
 			}
-
-			store[todo.title ? 'put' : 'delete'](todo)
-				.then(function success() {}, function error() {
-					todo.title = $scope.originalTodo.title;
-				})
-				.finally(function () {
-					$scope.editedTodo = null;
-				});
+			if (todo.title) {
+				store.put(todo)
+					.then(function success() {}, function error() {
+						todo.title = $scope.originalTodo.title;
+					})
+					.finally(function () {
+						$scope.editedTodo = null;
+					});
+			}
 		};
 
 		$scope.revertEdits = function (todo) {
@@ -83,10 +84,6 @@ angular.module('todomvc')
 			$scope.editedTodo = null;
 			$scope.originalTodo = null;
 			$scope.reverted = true;
-		};
-
-		$scope.removeTodo = function (todo) {
-			store.delete(todo);
 		};
 
 		$scope.saveTodo = function (todo) {

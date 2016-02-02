@@ -29,17 +29,6 @@ angular.module('todomvc')
 				localStorage.setItem(STORAGE_ID, JSON.stringify(todos));
 			},
 
-			delete: function (todo) {
-				var deferred = $q.defer();
-
-				store.todos.splice(store.todos.indexOf(todo), 1);
-
-				store._saveToLocalStorage(store.todos);
-				deferred.resolve(store.todos);
-
-				return deferred.promise;
-			},
-
 			get: function () {
 				var deferred = $q.defer();
 
