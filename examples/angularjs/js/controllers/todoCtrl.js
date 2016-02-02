@@ -20,14 +20,6 @@ angular.module('todomvc')
 			$scope.allChecked = !$scope.remainingCount;
 		}, true);
 
-		// Monitor the current route for changes and adjust the filter accordingly.
-		$scope.$on('$routeChangeSuccess', function () {
-			var status = $scope.status = $routeParams.status || '';
-			$scope.statusFilter = (status === 'active') ?
-				{ completed: false } : (status === 'completed') ?
-				{ completed: true } : {};
-		});
-
 		$scope.addTodo = function () {
 			var newTodo = {
 				title: $scope.newTodo.trim(),
