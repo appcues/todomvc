@@ -103,10 +103,6 @@ angular.module('todomvc')
 				});
 		};
 
-		$scope.clearCompletedTodos = function () {
-			store.clearCompleted();
-		};
-
 		$scope.markAll = function (completed) {
 			todos.forEach(function (todo) {
 				if (todo.completed !== completed) {
