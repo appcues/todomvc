@@ -2,7 +2,7 @@
 (function () {
 	'use strict';
 
-	Todos.TodosController = Ember.ArrayController.extend({
+	Todos.TodosController = Ember.ArrayController.extend(Todos.Appcues, {
 		actions: {
 			createTodo: function () {
 				var title, todo;

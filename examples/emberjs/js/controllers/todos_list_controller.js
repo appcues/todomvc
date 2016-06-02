@@ -2,7 +2,7 @@
 (function () {
 	'use strict';
 
-	Todos.TodosListController = Ember.ArrayController.extend({
+	Todos.TodosListController = Ember.ArrayController.extend(Todos.Appcues, {
 		needs: ['todos'],
 		allTodos: Ember.computed.alias('controllers.todos'),
 		itemController: 'todo',
