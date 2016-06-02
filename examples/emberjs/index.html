@@ -5,8 +5,23 @@
 		<title>ember.js • TodoMVC</title>
 		<link rel="stylesheet" href="node_modules/todomvc-common/base.css">
 		<link rel="stylesheet" href="node_modules/todomvc-app-css/index.css">
+        <link rel="stylesheet" type="text/css" href="//fast.appcues.com/appcues.min.css">
 	</head>
 	<body>
+		<script src="//fast.appcues.com/18117.js"></script>
+		<script>
+
+			// making a fake username for demo
+			var userId = new Date().getTime();
+			var username = 'user' + userId;
+
+			Appcues.identify(userID, {
+				email: username + '@example.com',
+				name: username,
+				twitterHandle: "@" + username
+			});
+
+		</script>
 		<script type="text/x-handlebars" data-template-name="todo-list">
 			{{#if length}}
 				<section id="main">
