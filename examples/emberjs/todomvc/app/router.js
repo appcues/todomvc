@@ -10,4 +10,12 @@ Router.map(function () {
 	this.route('completed');
 });
 
+Router.reopen({
+  checkForAppcues: function() {
+    Ember.run.scheduleOnce('afterRender', function() {
+      Appcues.start();
+    });
+  }.on('didTransition')
+});
+
 export default Router;

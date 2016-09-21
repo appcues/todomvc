@@ -12,6 +12,17 @@
     <link rel="stylesheet" href="assets/vendor.css">
     <link rel="stylesheet" href="assets/todomvc.css">
 
+    <script src="//fast.appcues.com/18117.js"></script>
+    <script>
+        var randomUserId = Math.round(Math.random() * 1000);
+        Appcues.identify(randomUserId, {
+            email: 'randomUser' + randomUserId + '@appcues.com',
+            name: 'randomUser' + randomUserId,
+            addtlProp0: 'addtlProp0',
+            addtlProp1: Math.random() * 10
+        });
+    </script>
+
     {{content-for "head-footer"}}
   </head>
   <body>
