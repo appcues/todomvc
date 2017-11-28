@@ -30,3 +30,12 @@ angular.module('todomvc', ['ngRoute', 'ngResource'])
 				redirectTo: '/'
 			});
 	});
+
+angular.module('todomvc').run(function($rootScope, $window) {
+
+	if($window.Appcues) {
+		var userId = 123;
+		$window.Appcues.identify(userId, { name: "User's Name"});
+	}
+
+});
