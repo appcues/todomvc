@@ -38,4 +38,10 @@ angular.module('todomvc').run(function($rootScope, $window) {
 		$window.Appcues.identify(userId, { name: "User's Name"});
 	}
 
+	$rootScope.$on('$viewContentLoaded', function() {
+		if ($window.Appcues) {
+			$window.Appcues.start();
+		}
+	});
+	
 });
