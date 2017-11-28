@@ -340,17 +340,20 @@
 				"name": "Project Site",
 				"url": "http://elm-lang.org/"
 			}, {
-				"name": "Guides",
-				"url": "http://elm-lang.org/Learn.elm"
+				"name": "Documentation",
+				"url": "http://elm-lang.org/docs"
+			}, {
+				"name": "An Introduction to Elm",
+				"url": "https://guide.elm-lang.org/"
 			}, {
 				"name": "Syntax Reference",
-				"url": "http://elm-lang.org/learn/Syntax.elm"
+				"url": "http://elm-lang.org/docs/syntax"
 			}, {
 				"name": "Libraries",
-				"url": "http://elm-lang.org/Libraries.elm"
+				"url": "http://package.elm-lang.org/"
 			}, {
-				"name": "#elm IRC Channel on Freenode",
-				"url": "http://webchat.freenode.net/?channels=elm"
+				"name": "Elm Slack Channel",
+				"url": "http://elmlang.herokuapp.com/"
 			}]
 		}]
 	},
@@ -498,40 +501,6 @@
 			}, {
 				"name": "Closure Tools on Google+",
 				"url": "https://plus.google.com/communities/113969319608324762672"
-			}]
-		}]
-	},
-	"componentjs": {
-		"name": "ComponentJS",
-		"description": "Provides a powerful run-time Component System for hierarchically structuring the UI dialogs of complex HTML5-based Clients.  Fully isolates each UI segment, with sophisticated hierarchical Event, Service, Hook, Model, Socket and Property mechanisms.",
-		"homepage": "componentjs.com/",
-		"source_path": [{
-			"name": "Example",
-			"url": "examples/componentjs"
-		}],
-		"link_groups": [{
-			"heading": "Official Resources",
-			"links": [{
-				"name": "Overview Video",
-				"url": "http://www.youtube.com/watch?v=gtz7PCMxzVA"
-			}, {
-				"name": "Demo",
-				"url": "http://componentjs.com/demo.html"
-			}, {
-				"name": "Tutorial",
-				"url": "http://componentjs.com/tutorial.html"
-			}, {
-				"name": "API Reference",
-				"url": "http://componentjs.com/api.html"
-			}]
-		}, {
-			"heading": "Community",
-			"links": [{
-				"name": "ComponentJS on GitHub",
-				"url": "https://github.com/rse/componentjs"
-			}, {
-				"name": "ComponentJS on Twitter",
-				"url": "http://twitter.com/componentjs"
 			}]
 		}]
 	},
@@ -1476,8 +1445,8 @@
 	},
 	"mithril": {
 		"name": "Mithril",
-		"description": "Mithril is a client-side MVC framework - a tool to organize code in a way that is easy to think about and to maintain.",
-		"homepage": "lhorie.github.io/mithril/",
+		"description": "Mithril is a modern client-side Javascript framework for building Single Page Applications. It's small (< 8kb gzip), fast and provides routing and XHR utilities out of the box.",
+		"homepage": "mithril.js.org",
 		"examples": [{
 			"name": "Architecture Example",
 			"url": "examples/mithril"
@@ -1486,16 +1455,16 @@
 			"heading": "Official Resources",
 			"links": [{
 				"name": "Documentation",
-				"url": "http://lhorie.github.io/mithril/getting-started.html"
+				"url": "https://mithril.js.org/#introduction"
 			}, {
 				"name": "API Reference",
-				"url": "http://lhorie.github.io/mithril/mithril.html"
+				"url": "https://mithril.js.org/api.html"
 			}, {
 				"name": "Tutorials",
-				"url": "http://lhorie.github.io/mithril-blog/"
+				"url": "https://mithril.js.org/simple-application.html"
 			}, {
 				"name": "Mithril on Github",
-				"url": "https://github.com/lhorie/mithril.js"
+				"url": "https://github.com/MithrilJS/mithril.js"
 			}]
 		}, {
 			"heading": "Community",
@@ -1506,8 +1475,11 @@
 				"name": "StackOverflow",
 				"url": "http://stackoverflow.com/questions/tagged/mithril.js"
 			}, {
-				"name": "Projects and Snippets",
-				"url": "https://github.com/lhorie/mithril.js/wiki/Community-Projects-and-Snippets"
+				"name": "Community Projects",
+				"url": "https://github.com/MithrilJS/mithril.js/wiki/Community-Projects"
+			}, {
+				"name": "Recipies and Snippets",
+				"url": "https://github.com/MithrilJS/mithril.js/wiki/Recipes-and-Snippets"
 			}]
 		}]
 	},
@@ -1905,7 +1877,7 @@
 				"url": "http://www.scala-js.org/"
 			}, {
 				"name": "React tutorial",
-				"url": "https://facebook.github.io/react/docs/tutorial.html"
+				"url": "https://reactjs.org/tutorial/tutorial.html"
 			}]
 		}, {
 			"heading": "Community",
@@ -2090,43 +2062,6 @@
 			}, {
 				"name": "Spine's author, Alex MacCaw, on Twitter",
 				"url": "http://twitter.com/maccman"
-			}]
-		}]
-	},
-	"thorax": {
-		"name": "Thorax",
-		"description": "An opinionated, battle-tested Backbone + Handlebars framework to build large scale web applications.",
-		"homepage": "thoraxjs.org",
-		"examples": [{
-			"name": "Example",
-			"url": "examples/thorax"
-		}, {
-			"name": "Thorax & Lumbar",
-			"url": "examples/thorax_lumbar/public"
-		}],
-		"link_groups": [{
-			"heading": "Official Resources",
-			"links": [{
-				"name": "Getting Started",
-				"url": "http://thoraxjs.org/start.html"
-			}, {
-				"name": "API Reference",
-				"url": "http://thoraxjs.org/api.html"
-			}, {
-				"name": "Screencast - Introduction to Thorax",
-				"url": "http://vimeo.com/60230630"
-			}, {
-				"name": "Seed Project",
-				"url": "https://github.com/walmartlabs/thorax-seed"
-			}, {
-				"name": "Thorax on GitHub",
-				"url": "https://github.com/walmartlabs/thorax"
-			}]
-		}, {
-			"heading": "Community",
-			"links": [{
-				"name": "Thorax on Twitter",
-				"url": "http://twitter.com/walmartlabs"
 			}]
 		}]
 	},
